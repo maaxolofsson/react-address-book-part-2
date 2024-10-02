@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 function Menu() {
     return (
         <div>
             <h3>Menu</h3>
-            <a href="">All contacts</a><br></br>
-            <a href="">Add new contact</a>
+            <Link to="/">All contacts</Link><br></br>
+            <Link to="/create">Add new contact</Link>
         </div>
     );
 }

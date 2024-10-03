@@ -7,6 +7,16 @@ export async function get(endpoint) {
     return data
 }
 
+export async function getOne(endpoint, id) {
+    const c = {
+        method: 'GET'
+    }
+    console.log(baseURL + githubUsername + endpoint + "/" + id)
+    const httpRes = await fetch(baseURL + githubUsername + endpoint + "/" + id, c);
+    const data = await httpRes.json();
+    return { httpRes, data }
+}
+
 export async function deleteOne(endpoint, id) {
     const c = {
         method: 'DELETE'
